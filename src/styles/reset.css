@@ -10,13 +10,17 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, button{
+time, mark, audio, video, button, textarea{
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	background-color: inherit;
+}
+* {
+	box-sizing: border-box;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -30,7 +34,7 @@ ol, ul {
 }
 
 body, html{
-    background-color: rgba(var(--color-whiteBackground), 1);
+    background-color: rgba(var(--color-whiteDark), 1);
     max-width: 100vw;
     font-family: var(--font-montserrat);
 }
