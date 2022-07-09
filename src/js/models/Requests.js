@@ -25,6 +25,7 @@ export default class Requests {
         .then(response => response.json())
         .then(response => {
             localStorage.setItem("@kenzie-token", response.token)
+            localStorage.setItem("@kenzie-userId", response.userId)
             return response
         }).catch(err => {
             console.log(err)

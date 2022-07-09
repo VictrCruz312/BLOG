@@ -1,4 +1,5 @@
 import Requests from "./Requests.js"
+import Posts from "./Posts.js"
 
 export default class Acess {
     static cardLogin() {
@@ -85,12 +86,24 @@ export default class Acess {
 
         inputs.forEach(input => {
             dados[input.id] = input.value
+            input.value = ""
         })
 
         if (inputs.length > 2) {
             return await Requests.registerUsers(dados)
         } else {
-            return await Requests.userLogin(dados)
+            await Requests.userLogin(dados)
+            window.location.href = "../../../index.html"
         }
+    }
+
+    static async printErr(messageErr) {
+        console.log(messageErr)
+        const body = document.querySelector("body")
+        const err = document.createElement("h2")
+        err.innerText = messageErr
+        body.insertAdjacentHTML("afterbegin", `
+        <h2>${messageErr}</h2>
+        `)
     }
 }

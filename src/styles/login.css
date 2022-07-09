@@ -4,8 +4,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-family: var(--font-montserrat);
     background-color: rgba(var(--color-blue), 0.25);
+}
+
+body h2{
+    background-color: #FFFFFF;
+    color: red;
+    margin-bottom: 10px;
 }
 
 .container__log {
