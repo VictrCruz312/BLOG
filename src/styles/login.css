@@ -29,7 +29,7 @@ body {
     margin-bottom: 31px;
 }
 
-.container__inputs {
+.form__inputs {
     display: flex;
     flex-direction: column;
     gap: 19px;
@@ -56,7 +56,8 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    margin-top: 19px;
+    align-self: center;
+    margin-top: 10px;
 }
 
 .textUser {
