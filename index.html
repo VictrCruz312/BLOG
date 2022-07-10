@@ -15,8 +15,8 @@
 <body>
   <header class="cabecalho">
     <div class="cabecalho__logo">
-      <img class="logo__img" src="src/assets/logo.png" alt="logo gatinho">
-      <h1 class="logo__h1">GatinhoFofo</h1>
+      <img id="userImg" class="logo__img" src="src/assets/logo.png" alt="logo gatinho">
+      <h1 id="userName" class="logo__h1">GatinhoFofo</h1>
     </div>
     <a href="src/pages/login.html" class="cabecalho__logout" id="btnLog">Logout</a>
   </header>
@@ -26,11 +26,11 @@
       <p>+</p>
     </div>
     <ul class="posts__listPosts">
-      <li class="listPosts__post">
+      <!-- <li class="listPosts__post">
         <figure class="post__figure"><img class="post__img" src="src/assets/logo.png" alt=""></figure>
         <div class="post__containerPost">
           <h2 class="post__title">GatinhoFofo</h2>
-          <p class="post__text">Lorem ipsum dolor sit amet. Et iste labore ut similique consequuntur et consequuntur harum est repellendus quia 33 tempore similique. Nam reprehenderit vero eos maxime consequatur At nihil facere vel quam nemo eum perspiciatis maiores qui atque quia. 
+          <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quia, ad sunt accusamus laudantium saepe! Sequi, pariatur corporis? Possimus, dolorem. Commodi, facere placeat cupiditate perspiciatis debitis quos maxime iusto nihil! Lorem ipsum dolor sit amet. Et iste labore ut similique consequuntur et consequuntur harum est repellendus quia 33 tempore similique. Nam reprehenderit vero eos maxime consequatur At nihil facere vel quam nemo eum perspiciatis maiores qui atque quia. 
           </p>
         </div>
         <div class="post__containerBtns">
@@ -38,8 +38,13 @@
           <button class="post__btnDelete" >Apagar</button>
           <span class="post__date">15/02/2022</span>
         </div>
-      </li>
+      </li> -->
     </ul>
+    <div class="posts__trocarPage">
+      <button class="trocarPage__anterior" id="anteriorPage">&#60 Anterior</button>
+      <p class="trocarPage__numberPage" id="Page-1">Página atual: 1</p>
+      <button class="trocarPage__proxima" id="proximaPage">Próxima &#62</button>
+    </div>
   </main>
 
   <script type="module" src="src/js/scripts/index.js"></script>

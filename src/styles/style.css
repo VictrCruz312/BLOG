@@ -16,6 +16,7 @@
 .logo__img {
     width: 49px;
     height: 46px;
+    border-radius: 100px;
 }
 
 .logo__h1 {
@@ -35,6 +36,7 @@
     font-size: 18px;
     line-height: 22px;
     color: rgba(var(--color-white), 1);
+    cursor: pointer;
 }
 
 .posts__Create {
@@ -73,13 +75,16 @@
     background-color: rgba(var(--color-gold), 1);
     border-radius: 5px;
     padding: 0 5px;
+    cursor: pointer;
 }
 
 .posts__listPosts {
     width: 601px;
     display: flex;
     flex-direction: column;
+    gap: 6px;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .listPosts__post {
@@ -93,9 +98,17 @@
     background-color: rgba(var(--color-white), 1);
 }
 
+.post__img {
+    width: 71px;
+    height: 71px;
+    border-radius: 100px;
+}
+
 .post__containerPost {
     width: 351px;
-
+    max-width: 351px;
+    height: 160px;
+    overflow-x: hidden;
 }
 
 .post__title {
@@ -106,6 +119,7 @@
 }
 
 .post__text {
+    display: block;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -115,8 +129,10 @@
 
 .post__containerBtns {
     align-self: flex-end;
-    width: 65px;
+    width: 80px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .post__btnEdit {
@@ -125,6 +141,7 @@
     line-height: 15px;
     color: rgba(var(--color-blue), 1);
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .post__btnDelete {
@@ -133,6 +150,7 @@
     line-height: 15px;
     color: rgba(var(--color-red), 1);
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .post__date {
@@ -140,4 +158,19 @@
     font-size: 12px;
     line-height: 14px;
     color: rgba(var(--color-gray), 1);
+}
+
+.posts__trocarPage {
+    width: 601px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto 50px auto;
+}
+
+.trocarPage__anterior, .trocarPage__proxima {
+    background-color: #797979;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
