@@ -21,13 +21,15 @@ export default class Acess {
         inputEmail.id = "email"
         inputEmail.placeholder = "Email"
         inputEmail.name = "email"
-        inputEmail.type = "text"
+        inputEmail.type = "email"
+        inputEmail.required = true
 
         inputPassword.classList.add("input")
         inputPassword.id = "password"
         inputPassword.name = "password"
-        inputPassword.type = "text"
+        inputPassword.type = "password"
         inputPassword.placeholder = "Senha"
+        inputPassword.required = true
 
         btnLogin.innerText = "Login"
         btnLogin.classList.add("btn")
@@ -56,22 +58,36 @@ export default class Acess {
         h1.classList.add("title")
         h1.innerText = "Cadastrar"
         form.classList.add("form__inputs")
+
         inputUsuario.classList.add("input")
         inputUsuario.id = "username"
+        inputUsuario.type = "text"
         inputUsuario.placeholder = "Nome de usuário"
+        inputUsuario.required = true
+
         inputEmail.classList.add("input")
         inputEmail.id = "email"
+        inputEmail.type = "email"
         inputEmail.placeholder = "Email"
+        inputEmail.required = true
+
         inputFotoPerfil.classList.add("input")
         inputFotoPerfil.id = "avatarUrl"
+        inputFotoPerfil.type = "text"
         inputFotoPerfil.placeholder = "Foto de perfil"
+        inputFotoPerfil.required = true
+
         inputPassword.classList.add("input")
         inputPassword.id = "password"
+        inputPassword.type = "password"
         inputPassword.placeholder = "Senha"
+        inputPassword.required = true
+
         btnCadastrar.innerText = "Cadastrar"
         btnCadastrar.classList.add("btn")
         btnCadastrar.type = "submit"
         btnCadastrar.id = "btnCadastrar"
+
         contaCriada.innerHTML = `criou sua conta <a href='' id='logar'>clique aqui</a> para logar`
         contaCriada.classList.add("textUser")
         
@@ -92,17 +108,16 @@ export default class Acess {
         if (inputs.length > 2) {
             return await Requests.registerUsers(dados)
         } else {
-            await Requests.userLogin(dados)
-            window.location.href = "../../../index.html"
+            return await Requests.userLogin(dados)
         }
     }
 
     static async printErr(messageErr) {
-        console.log(messageErr)
-        const body = document.querySelector("body")
+        const divErr = document.querySelector(".err")
+        divErr.innerText = ""
         const err = document.createElement("h2")
         err.innerText = messageErr
-        body.insertAdjacentHTML("afterbegin", `
+        divErr.insertAdjacentHTML("afterbegin", `
         <h2>${messageErr}</h2>
         `)
     }

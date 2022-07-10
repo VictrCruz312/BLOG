@@ -16,7 +16,7 @@ document.querySelector(".container__log").addEventListener("click", (event) => {
 })
 
 async function btnLoginRegister(event) {
-    if (event.target.id == "btnLogin" || event.target.id == "btnCadastrar"){
+    if (event.target.id == "btnCadastrar"){
     const acess = await Acess.loginOrRegister()
     if(acess.message){
         Acess.printErr(acess.message)
@@ -25,6 +25,13 @@ async function btnLoginRegister(event) {
         Acess.cardLogin()
         document.querySelector("#btnLogin").addEventListener("click", btnLoginRegister)
     }
+    } else if (event.target.id == "btnLogin") {
+        const acess = await Acess.loginOrRegister()
+        if (acess.userId) {
+            window.location.href = "../../../index.html"
+        } else {
+            Acess.printErr(acess.message)
+        }
     }
 }
 
