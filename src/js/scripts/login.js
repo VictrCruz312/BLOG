@@ -34,12 +34,3 @@ async function btnLoginRegister(event) {
         }
     }
 }
-
-let content = {
-    "content": "eu sou um novo post teste"
-}
-
-// console.log(await Requests.addPost(content))
-// console.log(await Requests.getPage(1))
-// console.log(await Requests.deletePost(4499))
-// console.log(await Requests.getPage(1))
